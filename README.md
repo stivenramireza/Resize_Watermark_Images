@@ -1,2 +1,3 @@
-# Resize_Watermark_Images
+# Resize Watermark Images
+
 Resize images with watermark using Python Pillow Imaging Library (PIL).
