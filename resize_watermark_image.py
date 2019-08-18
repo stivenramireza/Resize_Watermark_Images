@@ -1,6 +1,5 @@
 from PIL import Image
 
-
 def create_watermark(image_path, final_image_path, watermark):
     main = Image.open(image_path)
     mark = Image.open(watermark)
@@ -21,7 +20,6 @@ def create_watermark(image_path, final_image_path, watermark):
             main.paste(mark, (i, j), mark)
             main.thumbnail((8000, 8000), Image.ANTIALIAS)
             main.save(final_image_path, quality=100)
-
 
 if __name__ == '__main__':
     create_watermark('images/original.jpg',
