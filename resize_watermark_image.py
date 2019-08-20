@@ -21,7 +21,6 @@ def create_watermark(image_path, final_image_path, watermark):
             main.thumbnail((8000, 8000), Image.ANTIALIAS)
             main.save(final_image_path, quality=100)
 
-
 if __name__ == '__main__':
     create_watermark('images/original/imagen720.jpg',
                      'images/generated_image.jpg',
