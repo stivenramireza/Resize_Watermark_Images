@@ -5,7 +5,7 @@ def create_watermark(image_path, final_image_path, watermark):
     main = Image.open(image_path)
     mark = Image.open(watermark)
 
-    mask = mark.convert('L').point(lambda x: min(x, 1000))
+    mask = mark.convert('L').point(lambda x: min(x, 25))
     mark.putalpha(mask)
 
     mark_width, mark_height = mark.size
@@ -23,6 +23,6 @@ def create_watermark(image_path, final_image_path, watermark):
 
 
 if __name__ == '__main__':
-    create_watermark('images/original/imagen1.JPG',
+    create_watermark('images/original/imagen720.jpg',
                      'images/generated_image.jpg',
-                     'images/watermark/logo2000.png')   
+                     'images/watermark/logo720.png')   
