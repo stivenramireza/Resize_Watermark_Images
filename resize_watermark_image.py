@@ -11,7 +11,7 @@ def create_watermark(image_path, final_image_path, watermark):
     mark_width, mark_height = mark.size
     main_width, main_height = main.size
     aspect_ratio = mark_width / mark_height
-    new_mark_width = main_width * 0.25
+    new_mark_width = main_width * 1
     mark.thumbnail((new_mark_width, new_mark_width / aspect_ratio), Image.ANTIALIAS)
 
     tmp_img = Image.new('RGB', main.size)
@@ -24,6 +24,6 @@ def create_watermark(image_path, final_image_path, watermark):
 
 
 if __name__ == '__main__':
-    create_watermark('images/original.jpg',
-                     'images/original_final_watermarked.jpg',
-                     'images/pybites_trans.png')
+    create_watermark('images/original/2.JPG',
+                     'images/generated_image.jpg',
+                     'images/watermark/logo2000.png')
